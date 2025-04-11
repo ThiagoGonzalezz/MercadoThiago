@@ -1,58 +1,70 @@
-// Header.jsx
-import { ShoppingCartIcon, BellIcon, SearchIcon, MapPinIcon, MessageCircleIcon } from 'lucide-react'
+import {
+  ShoppingCartIcon,
+  BellIcon,
+  SearchIcon,
+  MapPinIcon,
+  MessageCircleIcon,
+} from 'lucide-react';
+import React from 'react';
 
 function Header() {
   return (
-    <header className="bg-gradient-to-r from-purple-700 to-purple-500 text-white shadow-md">
-      <div className="flex items-center justify-between px-4 py-2">
-        {/* Logo */}
-        <div className="flex items-center gap-2">
-          <img src="/logo.svg" alt="Logo" className="w-10 h-10" />
-          <h1 className="text-xl font-bold">MercadoThiago</h1>
+    <header className="text-white shadow" style={{ background: 'linear-gradient(to right, #A248C3, #A248C3)' }}>
+      {/* Top bar */}
+      <div className="container-fluid py-2 px-4 d-flex justify-content-between align-items-center">
+        {/* Logo + Marca */}
+        <div className="d-flex align-items-center gap-2">
+          <img src="/logo512-borde-blanco.png" alt="Logo" style={{ width: '40px', height: '40px' }} />
+          <h1 className="fs-5 fw-bold mb-0">MercadoThiago</h1>
         </div>
 
         {/* Search */}
-        <div className="flex-1 mx-4 max-w-xl">
-          <div className="flex bg-white rounded-full overflow-hidden shadow-sm">
+        <div className="flex-grow-1 mx-4" style={{ maxWidth: '600px' }}>
+          <div className="input-group shadow-sm rounded-pill overflow-hidden">
             <input
               type="text"
+              className="form-control border-0 text-dark px-4 py-2"
               placeholder="Buscar productos, marcas y más..."
-              className="flex-1 px-4 py-2 text-black outline-none"
+              style={{ borderRadius: 0 }}
             />
-            <button className="bg-yellow-400 px-4">
-              <SearchIcon className="text-black" />
+            <button className="btn btn-warning px-4 rounded-0">
+              <SearchIcon size={20} className="text-dark" />
             </button>
           </div>
         </div>
 
-        {/* Icons & user info */}
-        <div className="flex items-center gap-4">
-          <div className="flex items-center gap-1 text-sm">
-            <MapPinIcon size={16} />
-            <span>
-              Enviar a Thiago<br />
-              <span className="text-xs">Colonia 1141</span>
-            </span>
+        {/* Info usuario */}
+        <div className="d-flex align-items-start gap-4 text-white">
+          <div className="d-flex flex-column text-start small">
+            <div className="d-flex align-items-center gap-2">
+              <MapPinIcon size={40} />
+
+              <div className="d-flex flex-column text-start small montserrat">
+                <span>Enviar a Thiago</span>
+                <span className="ms-n1 fw-semibold">Colonia 1141</span>
+              </div>
+            </div>
           </div>
-          <span className="font-semibold">Mis Compras</span>
-          <span className="font-semibold">Mi Cuenta</span>
+          <a href="#" className="fw-semibold text-white text-decoration-none">Mis Compras</a>
+          <a href="#" className="fw-semibold text-white text-decoration-none">Mi Cuenta</a>
         </div>
       </div>
 
-      {/* Navegación */}
-      <nav className="flex gap-4 px-4 py-2 text-sm border-t border-purple-400">
-        <span className="cursor-pointer hover:underline">Categorías</span>
-        <span>Ofertas</span>
-        <span>Vender</span>
-        <span>Cupones</span>
-        <span>Favoritos</span>
-        <span>Ayuda</span>
-        <MessageCircleIcon />
-        <BellIcon />
-        <ShoppingCartIcon />
+      {/* Barra de navegación */}
+      <nav style={{ backgroundColor: '#C258E9' }} className="px-4 py-2">
+        <div className="d-flex gap-4 align-items-center small text-white montserrat">
+          {['Categorías', 'Ofertas', 'Vender', 'Cupones', 'Favoritos', 'Ayuda'].map((item) => (
+            <a key={item} href="#" className="text-white text-decoration-none hover-underline">{item}</a>
+          ))}
+          <div className="d-flex align-items-center gap-3 ms-auto">
+            <MessageCircleIcon size={20} className="cursor-pointer hover-opacity" />
+            <BellIcon size={20} className="cursor-pointer hover-opacity" />
+            <ShoppingCartIcon size={20} className="cursor-pointer hover-opacity" />
+          </div>
+        </div>
       </nav>
     </header>
-  )
+  );
 }
 
 export default Header;
