@@ -1,11 +1,14 @@
-import React from 'react';
-import './styles/App.css';
-import ProductNavigationScreen from './pages/ProductNavigationScreen';
+import React from 'react'
+import './styles/App.css'
+import Footer from './components/Footer'
+import Header from './components/Header'
+
 
 function App() {
   return (
     <div className="App">
-      <ProductNavigationScreen />
+      <Header />
+      <Footer />
     </div>
   );
 };
