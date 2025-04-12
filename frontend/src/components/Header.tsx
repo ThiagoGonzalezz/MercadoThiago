@@ -14,8 +14,8 @@ function Header() {
       <div className="container-fluid py-2 px-4 d-flex justify-content-between align-items-center">
         {/* Logo + Marca */}
         <div className="d-flex align-items-center gap-2">
-          <img src="/logo512-borde-blanco.png" alt="Logo" style={{ width: '40px', height: '40px' }} />
-          <h1 className="fs-5 fw-bold mb-0">MercadoThiago</h1>
+          <img src="/logo512-borde-blanco.png" alt="Logo" style={{ width: '70px', height: '70px' }} />
+          <h1 className="fs-2 mb-0">MercadoThiago</h1>
         </div>
 
         {/* Search */}
