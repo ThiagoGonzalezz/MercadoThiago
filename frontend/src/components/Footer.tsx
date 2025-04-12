@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer style={{ background: 'linear-gradient(to right, #6b21a8, #9333ea)' }} className="text-white text-center py-3">
+    <footer style={{ background: 'linear-gradient(to right, #A248C3, #A248C3)', }} className="text-white text-center py-3">
       <div className="container">
         <div className="d-flex flex-wrap justify-content-center gap-3 mb-2 small">
           <span>Términos y condiciones</span>
