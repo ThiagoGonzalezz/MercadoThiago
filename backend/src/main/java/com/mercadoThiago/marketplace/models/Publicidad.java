@@ -7,4 +7,5 @@ public class Publicidad {
     private TipoPublicidad tipoPublicidad;
     private String foto;
     private List<Categoria> categoriasAsociadas;
+    private String titulo;
 }
