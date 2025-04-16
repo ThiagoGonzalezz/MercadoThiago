@@ -12,18 +12,18 @@ import logo from "../../assets/logo512-borde-blanco.png";
 
 const Header: React.FC = () => {
   return (
-    <header className="bg-[#a646c6] text-white text-sm">
+    <header className="bg-[#a646c6] text-white text-sm font-montserrat shadow-2x1">
       {/* Primera línea */}
       <div className="flex items-center justify-between px-6 py-3">
         {/* Logo + nombre */}
         <div className="flex items-center space-x-3">
-          <img src={logo} alt="Logo" className="w-12 h-12 rounded-full" />
+          <img src={logo} alt="Logo" className="w-16 h-16 rounded-full" />
           <h1 className="text-2xl font-bold">MercadoThiago</h1>
         </div>
 
         {/* Barra de búsqueda */}
         <div className="flex-1 mx-6 max-w-2xl">
-          <div className="flex rounded-full overflow-hidden shadow">
+          <div className="flex rounded-md overflow-hidden shadow">
             <input
               type="text"
               placeholder="Buscar productos, marcas y más..."
@@ -37,22 +37,22 @@ const Header: React.FC = () => {
 
         {/* Envío + links */}
         <div className="flex items-center space-x-6">
-          <div className="flex items-center space-x-2">
+          <a href="#" className="flex items-center space-x-2 hover:scale-110 transition">
             <MapPinIcon className="text-xl" />
             <div className="leading-4">
               <p className="text-xs">Enviar a Thiago</p>
               <p className="text-sm font-semibold">Colonia 1141</p>
             </div>
-          </div>
-          <a href="#" className="font-semibold hover:underline">Mis Compras</a>
-          <a href="#" className="font-semibold hover:underline">Mi Cuenta</a>
+          </a>
+          <a href="#" className="font-bold hover:scale-110 transition">Mis Compras</a>
+          <a href="#" className="font-bold hover:scale-110 transition">Mi Cuenta</a>
         </div>
       </div>
 
       {/* Segunda línea */}
       <div className="bg-[#b453c6] px-6 py-2 flex items-center justify-between text-white font-medium text-sm">
         {/* Menú */}
-        <div className="flex space-x-5">
+        <div className="flex space-x-5 font-light">
           <a href="#" className="hover:underline">Categorías</a>
           <a href="#" className="hover:underline">Ofertas</a>
           <a href="#" className="hover:underline">Cupones</a>

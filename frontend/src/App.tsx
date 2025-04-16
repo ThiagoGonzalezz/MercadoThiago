@@ -1,17 +1,23 @@
 import React from 'react'
 import './styles/App.css'
-//import Footer from './components/utils/Footer'
-import Header from './components/utils/Header'
+import Footer from './components/footer/Footer'
+import Header from './components/header/Header'
 
 
 function App() {
   return (
-    <div className="App d-flex flex-column min-vh-100">
+    <div className="flex flex-col min-h-screen">
       <Header />
-      <main className="flex-grow-1">
-        {/* Acá va el contenido de la página */}
+      
+      <main className="flex-grow">
+      <div className="container mx-auto py-8">
+          {/* Tu contenido va acá */}
+          <h1 className="text-2xl font-bold">Página de ejemplo</h1>
+          <p>Contenido de la página...</p>
+        </div>
       </main>
-      {/*<Footer />*/}
+     
+      <Footer />
     </div>
   );
 };
