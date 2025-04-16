@@ -1,5 +1,5 @@
 import React from 'react';
-
+/*
 const Footer = () => {
   return (
     <footer style={{ background: 'linear-gradient(to right, #A248C3, #A248C3)', }} className="text-white text-center py-3">
@@ -15,8 +15,8 @@ const Footer = () => {
           © 2024-2025 MercadoThiago, Inc. o sus afiliados
         </div>
       </div>
-    </footer>
+    </footer> 
   );
 };
 
-export default Footer;
+export default Footer;*/
