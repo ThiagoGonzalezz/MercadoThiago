@@ -1,8 +1,7 @@
 package com.mercadoThiago.marketplace.dtos;
 
-public record PublicidadDTO(
+public record CategoriaIndiceDTO(
         long id,
-        String titulo,
         String fotoUrl,
-        String recursoAsociado
+        String titulo
 ) {}

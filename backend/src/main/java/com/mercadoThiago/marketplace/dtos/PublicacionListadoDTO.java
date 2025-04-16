@@ -2,7 +2,7 @@ package com.mercadoThiago.marketplace.dtos;
 
 
 public record PublicacionListadoDTO(
-        Long id,
+        long id,
         String titulo,
         String imagenUrl,
         double precio,
