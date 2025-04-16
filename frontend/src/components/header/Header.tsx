@@ -12,7 +12,7 @@ import logo from "../../assets/logo512-borde-blanco.png";
 
 const Header: React.FC = () => {
   return (
-    <header className="bg-[#A248C3] text-white text-sm font-montserrat shadow-2x1">
+    <header className="bg-[#A248C3] text-white text-sm font-montserrat shadow-lg">
       {/* Primera línea */}
       <div className="flex items-center justify-between px-6 py-3">
         {/* Logo + nombre */}
@@ -50,7 +50,7 @@ const Header: React.FC = () => {
       </div>
 
       {/* Segunda línea */}
-      <div className="bg-[#C258E9] px-6 py-2 flex items-center justify-between text-white font-medium text-sm">
+      <div className="bg-[#C258E9] px-6 py-2 flex items-center justify-between text-white font-medium text-sm shadow-lg">
         {/* Menú */}
         <div className="flex space-x-5 font-light">
           <a href="#" className="hover:underline">Categorías</a>
