@@ -10,18 +10,18 @@ import IndicePublicacionesBanner from "./../components/catalogo/IndicePublicacio
 import AccesosRapidosBanner from "./../components/catalogo/AccesosRapidosBanner";
 
 
-import Publicidad from "./assets/publicidades/nivel2/publicidad2.png";
-import Publicidad1 from "./assets/publicidades/nivel1/2nivel1.webp";
+import Publicidad from "./../assets/publicidades/nivel2/publicidad2.png";
+import Publicidad1 from "./../assets/publicidades/nivel1/2nivel1.webp";
 
 const PaginaPrincipal: React.FC = () => {
     return (
         <div>
             <PublicidadNivel1 imagen={Publicidad1} link="/ofertas" alt="PublicidadNivel1" />
 
-
             <main className="flex-grow bg-[#FFCE83]">
 
                 <div className="container mx-auto py-8">
+                    
                     <AccesosRapidosBanner/>
                     
                     <CategoriasRecomendadasBanner />
@@ -34,6 +34,7 @@ const PaginaPrincipal: React.FC = () => {
                     <IndiceCategoriasBanner />
                     <OfertasBanner />
                     <IndicePublicacionesBanner/>
+
                 </div>
             </main>
       
