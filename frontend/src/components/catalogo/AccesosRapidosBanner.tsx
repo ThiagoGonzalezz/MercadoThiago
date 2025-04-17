@@ -31,22 +31,22 @@ const tarjetas = [
 
 const AccesosRapidosBanner: React.FC = () => {
     return (
-      <div className="relative w-full max-w-6xl mx-auto p-4">
-        <div className="grid grid-cols-4 gap-4 w-full">
+      <div className="relative w-full max-w-6xl mx-auto py-4">
+        <div className="grid grid-cols-4 gap-x-4 gap-y-4 w-full">
           {tarjetas.map((tarjeta, index) => (
             <TarjetaAccesoRapido key={index} {...tarjeta} />
           ))}
         </div>
-  
-        {/* Botones de navegación (los podés ocultar o usar si después hacés scroll horizontal) */}
+
+        {/* Botones de navegación */}
         <button
           className="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#CF6EF3] text-white rounded-full p-3 shadow-md hover:bg-purple-600 hover:drop-shadow-lg transition"
         >
           <ChevronLeft />
         </button>
-  
+
         <button
-          className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 bg-[#CF6EF3] text-white rounded-full p-3 shadow-md hover:bg-purple-600 hover:drop-shadow-lg transition"
+          className="absolute right-0 top-1/2 translate-x-1/2 -translate-y-1/2 bg-[#CF6EF3] text-white rounded-full p-3 shadow-md hover:bg-purple-600 hover:drop-shadow-lg transition"
         >
           <ChevronRight />
         </button>
