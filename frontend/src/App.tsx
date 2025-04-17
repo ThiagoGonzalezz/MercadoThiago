@@ -12,7 +12,7 @@ import IndicePublicacionesBanner from "./components/catalogo/IndicePublicaciones
 import AccesosRapidosBanner from "./components/catalogo/AccesosRapidosBanner";
 
 import Publicidad from "./assets/publicidades/publicidad1.png";
-import Publicidad1 from "./assets/publicidades/publicidad2.png";
+import Publicidad1 from "./assets/publicidades/2nivel1.webp";
 
 function App() {
   return (
