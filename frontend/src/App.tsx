@@ -8,6 +8,7 @@ import PublicidadBanner from "./components/catalogo/PublicidadNivel2Banner";
 import PublicidadNivel1 from "./components/catalogo/PublicidadNivel1Banner";
 import BeneficiosBanner from "./components/catalogo/BeneficiosBanner";
 import OfertasBanner from './components/catalogo/OfertasBanner'
+import IndicePublicacionesBanner from "./components/catalogo/IndicePublicacionesBanner";
 
 import Publicidad from "./assets/publicidades/publicidad1.png";
 import Publicidad1 from "./assets/publicidades/publicidad2.png";
@@ -32,6 +33,7 @@ function App() {
           />
           <IndiceCategoriasBanner />
           <OfertasBanner />
+          <IndicePublicacionesBanner/>
         </div>
       </main>
 
