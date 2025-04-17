@@ -64,7 +64,7 @@ const productos = [
 const IndicePublicacionesBanner: React.FC = () => {
   return (
     <div className="relative w-full max-w-6xl mx-auto bg-white p-6 rounded-2xl shadow-lg font-roboto">
-      <h2 className="text-xl font-semibold mb-4">Elegidos para vos en Auriculares</h2>
+      <h2 className="text-xl font-semibold font-montserrat mb-4">Elegidos para vos en Auriculares</h2>
 
       <div className="grid grid-cols-6 gap-4">
         {productos.map((producto) => (

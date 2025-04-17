@@ -81,10 +81,10 @@ const IndiceCategorias: React.FC = () => {
       {/* Header */}
       <div className="flex justify-between items-start px-2 mb-4">
         <div className="flex items-center gap-2">
-          <h2 className="text-lg font-semibold">Categorías</h2>
+          <h2 className="text-lg font-semibold font-montserrat">Categorías</h2>
           <a
             href="#"
-            className="text-sm font-mediumplus text-[#A248C3] hover:underline"
+            className="text-sm font-roboto font-medium text-[#A248C3] hover:underline"
           >
             Mostrar todas las categorías
           </a>
@@ -119,7 +119,7 @@ const IndiceCategorias: React.FC = () => {
               />
             </div>
             <div className="p-3">
-              <span className="text-sm font-mediumplus leading-tight transition-colors duration-300 group-hover:text-purple-600">
+              <span className="text-sm font-medium font-montserrat leading-tight transition-colors duration-300 group-hover:text-purple-600">
                 {cat.name}
               </span>
             </div>

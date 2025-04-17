@@ -17,7 +17,7 @@ const CategoriasRecomendadas: React.FC<DestacadaProps> = ({
       <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
         {/* Título */}
         <div className="p-4">
-          <h3 className="text-lg font-semibold text-[#484848] uppercase">{titulo}</h3>
+          <h3 className="text-lg font-montserrat font-semibold text-[#484848] uppercase">{titulo}</h3>
         </div>
 
         {/* Imagen principal con fondo violeta */}

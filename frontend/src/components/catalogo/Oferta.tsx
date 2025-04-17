@@ -24,7 +24,7 @@ const TarjetaOferta: React.FC<TarjetaOfertaProps> = ({ title, subtitle, image, h
           {title}
         </h3>
         <div className="mt-4">
-          <span className="inline-block bg-[#A248C3] text-white text-sm font-medium py-2 px-4 rounded-md hover:bg-[#8D45A8]">
+          <span className="inline-block bg-[#A248C3] text-white text-sm font-roboto font-medium py-2 px-4 rounded-md hover:bg-[#8D45A8]">
             Ver ofertas
           </span>
         </div>

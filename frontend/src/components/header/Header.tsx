@@ -18,12 +18,12 @@ const Header: React.FC = () => {
         {/* Logo + nombre */}
         <div className="flex items-center space-x-3">
           <img src={logo} alt="Logo" className="w-16 h-16 rounded-full" />
-          <h1 className="text-2xl font-bold">MercadoThiago</h1>
+          <h1 className="mercado-logo-text">MercadoThiago</h1>
         </div>
 
         {/* Barra de búsqueda */}
         <div className="flex-1 mx-6 max-w-2xl">
-          <div className="flex rounded-md overflow-hidden shadow">
+          <div className="flex rounded-lg overflow-hidden shadow">
             <input
               type="text"
               placeholder="Buscar productos, marcas y más..."
@@ -50,7 +50,7 @@ const Header: React.FC = () => {
       </div>
 
       {/* Segunda línea */}
-      <div className="bg-[#C258E9] px-6 py-2 flex items-center justify-between text-white font-medium text-sm shadow-lg">
+      <div className="bg-[#C258E9] px-6 py-2 flex items-center justify-between text-white font-montserrat font-medium text-sm shadow-lg">
         {/* Menú */}
         <div className="flex space-x-5 font-light">
           <a href="#" className="hover:underline">Categorías</a>
