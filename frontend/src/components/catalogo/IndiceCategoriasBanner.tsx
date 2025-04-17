@@ -80,7 +80,7 @@ const IndiceCategorias: React.FC = () => {
     <div className="relative w-full max-w-6xl mx-auto bg-white p-4 rounded-2xl shadow-lg">
       {/* Header */}
       <div className="flex justify-between items-start px-2 mb-4">
-        <div className="flex items-center gap-2">
+        <div className="flex items-baseline gap-2">
           <h2 className="text-lg font-semibold font-montserrat">Categorías</h2>
           <a
             href="#"

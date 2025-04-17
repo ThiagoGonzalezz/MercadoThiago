@@ -30,7 +30,8 @@ const BeneficiosBanner: React.FC = () => {
 
   return (
     <div className="relative bg-white rounded-xl shadow-lg px-6 py-4 max-w-6xl mx-auto overflow-visible">
-      <div className="flex items-center gap-3 mb-2">
+      {/* Header */}
+      <div className="flex items-baseline gap-2 mb-[10px]">
         <h2 className="text-lg font-semibold font-montserrat">Beneficios</h2>
         <a
           href="#"
