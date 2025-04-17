@@ -22,7 +22,7 @@ import Deporte4 from "../../assets/publicaciones/deporte4.png";
 
 const CategoriasRecomendadas: React.FC = () => {
   return (
-    <div className="items-center justify-center w-full max-w-6xl mx-auto px-0 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+    <div className="items-center justify-center w-full max-w-6xl mx-auto px-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
       <CategoriaRecomendada
         titulo="Celulares"
         imagenPrincipal={RecomendacionCelulares}
