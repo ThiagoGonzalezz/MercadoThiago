@@ -9,6 +9,7 @@ import PublicidadNivel1 from "./components/catalogo/PublicidadNivel1Banner";
 import BeneficiosBanner from "./components/catalogo/BeneficiosBanner";
 import OfertasBanner from './components/catalogo/OfertasBanner'
 import IndicePublicacionesBanner from "./components/catalogo/IndicePublicacionesBanner";
+import AccesosRapidosBanner from "./components/catalogo/AccesosRapidosBanner";
 
 import Publicidad from "./assets/publicidades/publicidad1.png";
 import Publicidad1 from "./assets/publicidades/publicidad2.png";
@@ -21,8 +22,11 @@ function App() {
       {/* Publicidad que ocupa todo el ancho */}
       <PublicidadNivel1 imagen={Publicidad1} link="/ofertas" alt="PublicidadNivel1" />
 
+
       <main className="flex-grow bg-[#FFCE83]">
+
         <div className="container mx-auto py-8">
+          <AccesosRapidosBanner/>
           {/* Contenido limitado al ancho */}
           <CategoriasRecomendadasBanner />
           < BeneficiosBanner/>

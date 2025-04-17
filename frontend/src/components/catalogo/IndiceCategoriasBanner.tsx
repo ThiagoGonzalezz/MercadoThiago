@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import Image from "../../assets/indices-categorias/indice-auto.png";
+import Image from "../../assets/indices_categorias/indice-auto.png";
 
 type Category = {
   name: string;
@@ -106,9 +106,10 @@ const IndiceCategorias: React.FC = () => {
       {/* Tarjetas */}
       <div className="grid grid-cols-4 gap-4">
         {visibleCategories.map((cat, idx) => (
-          <div
+          <a
             key={idx}
-            className="flex items-center bg-white border rounded-xl p-0 shadow-sm overflow-hidden"
+            href="#"
+            className="group flex items-center bg-white border rounded-xl p-0 shadow-sm overflow-hidden hover:shadow-md transition"
           >
             <div className="bg-[#F6F6F6] w-[35%] h-full flex items-center justify-center p-2">
               <img
@@ -118,11 +119,11 @@ const IndiceCategorias: React.FC = () => {
               />
             </div>
             <div className="p-3">
-              <span className="text-sm font-mediumplus leading-tight">
+              <span className="text-sm font-mediumplus leading-tight transition-colors duration-300 group-hover:text-purple-600">
                 {cat.name}
               </span>
             </div>
-          </div>
+          </a>
         ))}
       </div>
 
@@ -144,7 +145,7 @@ const IndiceCategorias: React.FC = () => {
           <ChevronRight />
         </button>
       )}
-          </div>
+    </div>
   );
 };
 
