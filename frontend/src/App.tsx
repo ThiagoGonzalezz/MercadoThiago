@@ -6,6 +6,7 @@ import IndiceCategoriasBanner from './components/catalogo/IndiceCategoriasBanner
 import CategoriasRecomendadasBanner from "./components/catalogo/CategoriasRecomendadasBanner";
 import PublicidadBanner from "./components/catalogo/PublicidadNivel2Banner";
 import PublicidadNivel1 from "./components/catalogo/PublicidadNivel1Banner";
+import BeneficiosBanner from "./components/catalogo/BeneficiosBanner";
 
 import Publicidad from "./assets/publicidades/publicidad1.png";
 import Publicidad1 from "./assets/publicidades/publicidad2.png";
@@ -22,6 +23,7 @@ function App() {
         <div className="container mx-auto py-8">
           {/* Contenido limitado al ancho */}
           <CategoriasRecomendadasBanner />
+          < BeneficiosBanner/>
           <PublicidadBanner 
             imagen={Publicidad}
             link="https://tusitio.com/productos"
