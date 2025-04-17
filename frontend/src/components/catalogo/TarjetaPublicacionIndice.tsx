@@ -21,8 +21,10 @@ const TarjetaPublicacionIndice: React.FC<PublicacionIndiceProps> = ({
   cuotas,
   envio,
 }) => {
+  const envioDestacado = envio.toLowerCase().includes("llega gratis mañana");
+
   return (
-    <a href="#" className="flex flex-col gap-1 text-sm group p-2 rounded transition">
+    <a href="#" className="flex flex-col gap-1 text-sm group p-2 rounded">
       {/*Cambiar Imagen por imagen*/}
       <img src={Imagen} alt={nombre} className="w-full h-40 object-contain" />
       <span className="leading-tight text-black font-medium line-clamp-2 group-hover:text-purple-600">
@@ -34,7 +36,13 @@ const TarjetaPublicacionIndice: React.FC<PublicacionIndiceProps> = ({
       <span className="text-black font-bold text-base">$ {precioActual.toLocaleString()}</span>
       {descuento && <span className="text-xs text-purple-600 font-medium">{descuento}</span>}
       <span className="text-black text-xs">{cuotas}</span>
-      <span className="text-purple-600 text-xs font-semibold select-none">{envio}</span>
+      <span
+        className={`inline-block w-fit text-xs font-semibold select-none ${
+          envioDestacado ? "px-2 py-0.5 rounded bg-[#CF6EF34A] text-purple-700" : "text-purple-600"
+        }`}
+      >
+        {envio}
+      </span>
     </a>
   );
 };
