@@ -20,7 +20,7 @@ const PaginaPrincipal: React.FC = () => {
 
             <main className="flex-grow bg-[#FFCE83]">
 
-                <div className="container mx-auto py-8">
+                <div className="container mx-auto py-8 space-y-10">
                     
                     <AccesosRapidosBanner/>
                     
