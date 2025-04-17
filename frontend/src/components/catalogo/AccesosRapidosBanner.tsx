@@ -31,7 +31,7 @@ const tarjetas = [
 
 const AccesosRapidosBanner: React.FC = () => {
     return (
-      <div className="relative w-full max-w-6xl mx-auto py-4">
+      <div className="relative w-full max-w-6xl mx-auto py-4 -mt-20">
         <div className="grid grid-cols-4 gap-x-4 gap-y-4 w-full">
           {tarjetas.map((tarjeta, index) => (
             <TarjetaAccesoRapido key={index} {...tarjeta} />

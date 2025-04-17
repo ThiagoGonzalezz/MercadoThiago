@@ -9,7 +9,7 @@ type PublicidadNivel1Props = {
 const PublicidadNivel1: React.FC<PublicidadNivel1Props> = ({ imagen, link = "#", alt = "" }) => {
     return (
         <a href={link} className="block w-full">
-            <div className="relative w-full max-w-full h-auto overflow-hidden">
+            <div className="relative w-full max-w-full h-auto overflow-hidden -mb-20">
                 {/* Imagen de fondo a pantalla completa */}
                 <img
                     src={imagen}
