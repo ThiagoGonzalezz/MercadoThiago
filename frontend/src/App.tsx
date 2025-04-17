@@ -11,7 +11,7 @@ import OfertasBanner from './components/catalogo/OfertasBanner'
 import IndicePublicacionesBanner from "./components/catalogo/IndicePublicacionesBanner";
 import AccesosRapidosBanner from "./components/catalogo/AccesosRapidosBanner";
 
-import Publicidad from "./assets/publicidades/publicidad1.png";
+import Publicidad from "./assets/publicidades/publicidad3.png";
 import Publicidad1 from "./assets/publicidades/2nivel1.webp";
 
 function App() {
