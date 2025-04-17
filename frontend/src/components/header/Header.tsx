@@ -38,10 +38,10 @@ const Header: React.FC = () => {
         {/* Envío + links */}
         <div className="flex items-center space-x-6">
           <a href="#" className="flex items-center space-x-2 hover:scale-110 transition">
-            <MapPinIcon className="text-xl" />
+            <MapPinIcon className="h-9 w-9" />
             <div className="leading-4">
-              <p className="text-xs">Enviar a Thiago</p>
-              <p className="text-sm font-semibold">Colonia 1141</p>
+              <p className="text-xs font-montserrat font-medium text-[#E8E8E8]">Enviar a Thiago</p>
+              <p className="text-sm font-montserrat font-semibold">Colonia 1141</p>
             </div>
           </a>
           <a href="#" className="font-bold hover:scale-110 transition">Mis Compras</a>
