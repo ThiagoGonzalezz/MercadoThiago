@@ -1,6 +1,5 @@
 import React from "react";
 import TarjetaOferta from "./Oferta"; 
-import Imagen from "../../assets/ofertas/baterias.png";
 
 const OfertasBanner: React.FC = () => {
     return (
@@ -8,13 +7,13 @@ const OfertasBanner: React.FC = () => {
         <TarjetaOferta
           title="HASTA 20% OFF EN BATERÍAS DE AUTO"
           subtitle="Hacé el cambio"
-          image={Imagen} // reemplazá con la ruta real
+          image={`${process.env.REACT_APP_BACKEND_URL}/uploads/ofertas/baterias.png`} // reemplazá con la ruta real
           href="https://ejemplo.com/baterias"
         />
         <TarjetaOferta
           title="HASTA 25% OFF Y 3X SIN INTERÉS"
           subtitle="¡Decorá tu hogar!"
-          image={Imagen} // reemplazá con la ruta real
+          image={`${process.env.REACT_APP_BACKEND_URL}/uploads/ofertas/baterias.png`} // reemplazá con la ruta real
           href="https://ejemplo.com/deco"
         />
       </div>

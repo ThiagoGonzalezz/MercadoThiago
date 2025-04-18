@@ -1,0 +1,346 @@
+2025-04-17T21:12:20.337-03:00  INFO 12272 --- [mercado-thiago-core] [main] c.m.c.server.MercadoThiagoApplication    : Starting MercadoThiagoApplication using Java 21.0.5 with PID 12272 (C:\Users\Thiago Gonzalez\Desktop\MercadoThiago\backend\target\classes started by Thiago Gonzalez in C:\Users\Thiago Gonzalez\Desktop\MercadoThiago\backend)
+2025-04-17T21:12:20.339-03:00  INFO 12272 --- [mercado-thiago-core] [main] c.m.c.server.MercadoThiagoApplication    : The following 1 profile is active: "dev"
+2025-04-17T21:12:20.666-03:00  WARN 12272 --- [mercado-thiago-core] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.mercadoThiago.core.server.MercadoThiagoApplication]: Error processing condition on org.springframework.boot.autoconfigure.security.reactive.ReactiveUserDetailsServiceAutoConfiguration
+2025-04-17T21:12:20.672-03:00  INFO 12272 --- [mercado-thiago-core] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-04-17T21:12:20.693-03:00 ERROR 12272 --- [mercado-thiago-core] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.mercadoThiago.core.server.MercadoThiagoApplication]: Error processing condition on org.springframework.boot.autoconfigure.security.reactive.ReactiveUserDetailsServiceAutoConfiguration
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:626) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:849) ~[spring-context-6.2.5.jar:6.2.5]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:846) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:816) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:197) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:418) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:791) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:609) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.4.jar:3.4.4]
+	at com.mercadoThiago.core.server.MercadoThiagoApplication.main(MercadoThiagoApplication.java:11) ~[classes/:na]
+Caused by: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.security.reactive.ReactiveUserDetailsServiceAutoConfiguration
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-3.4.4.jar:3.4.4]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:99) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:246) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:616) ~[spring-context-6.2.5.jar:6.2.5]
+	... 18 common frames omitted
+Caused by: org.springframework.util.PlaceholderResolutionException: Could not resolve placeholder 'SECURITY_PASSWORD' in value "${SECURITY_PASSWORD}"
+	at org.springframework.util.PlaceholderResolutionException.withValue(PlaceholderResolutionException.java:81) ~[spring-core-6.2.5.jar:6.2.5]
+	at org.springframework.util.PlaceholderParser$ParsedValue.resolve(PlaceholderParser.java:423) ~[spring-core-6.2.5.jar:6.2.5]
+	at org.springframework.util.PlaceholderParser.replacePlaceholders(PlaceholderParser.java:128) ~[spring-core-6.2.5.jar:6.2.5]
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:118) ~[spring-core-6.2.5.jar:6.2.5]
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:114) ~[spring-core-6.2.5.jar:6.2.5]
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:255) ~[spring-core-6.2.5.jar:6.2.5]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:226) ~[spring-core-6.2.5.jar:6.2.5]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveNestedPlaceholders(AbstractPropertyResolver.java:246) ~[spring-core-6.2.5.jar:6.2.5]
+	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:81) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:62) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.core.env.AbstractEnvironment.getProperty(AbstractEnvironment.java:557) ~[spring-core-6.2.5.jar:6.2.5]
+	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition$Spec.collectProperties(OnPropertyCondition.java:121) ~[spring-boot-autoconfigure-3.4.4.jar:3.4.4]
+	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition.determineOutcome(OnPropertyCondition.java:71) ~[spring-boot-autoconfigure-3.4.4.jar:3.4.4]
+	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition.getMatchOutcome(OnPropertyCondition.java:58) ~[spring-boot-autoconfigure-3.4.4.jar:3.4.4]
+	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberOutcomes.getConditionOutcome(AbstractNestedCondition.java:195) ~[spring-boot-autoconfigure-3.4.4.jar:3.4.4]
+	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberOutcomes.<init>(AbstractNestedCondition.java:189) ~[spring-boot-autoconfigure-3.4.4.jar:3.4.4]
+	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberConditions.lambda$getMatchOutcomes$0(AbstractNestedCondition.java:169) ~[spring-boot-autoconfigure-3.4.4.jar:3.4.4]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:986) ~[na:na]
+	at org.springframework.util.MultiValueMapAdapter.forEach(MultiValueMapAdapter.java:179) ~[spring-core-6.2.5.jar:6.2.5]
+	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1707) ~[na:na]
+	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberConditions.getMatchOutcomes(AbstractNestedCondition.java:169) ~[spring-boot-autoconfigure-3.4.4.jar:3.4.4]
+	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberMatchOutcomes.<init>(AbstractNestedCondition.java:78) ~[spring-boot-autoconfigure-3.4.4.jar:3.4.4]
+	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition.getMatchOutcome(AbstractNestedCondition.java:63) ~[spring-boot-autoconfigure-3.4.4.jar:3.4.4]
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-3.4.4.jar:3.4.4]
+	... 21 common frames omitted
+
+2025-04-17T21:14:02.872-03:00  INFO 8944 --- [mercado-thiago-core] [main] c.m.c.server.MercadoThiagoApplication    : Starting MercadoThiagoApplication using Java 21.0.5 with PID 8944 (C:\Users\Thiago Gonzalez\Desktop\MercadoThiago\backend\target\classes started by Thiago Gonzalez in C:\Users\Thiago Gonzalez\Desktop\MercadoThiago\backend)
+2025-04-17T21:14:02.873-03:00  INFO 8944 --- [mercado-thiago-core] [main] c.m.c.server.MercadoThiagoApplication    : The following 1 profile is active: "dev"
+2025-04-17T21:14:03.105-03:00  WARN 8944 --- [mercado-thiago-core] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.mercadoThiago.core.server.MercadoThiagoApplication]: Error processing condition on org.springframework.boot.autoconfigure.security.reactive.ReactiveUserDetailsServiceAutoConfiguration
+2025-04-17T21:14:03.110-03:00  INFO 8944 --- [mercado-thiago-core] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-04-17T21:14:03.123-03:00 ERROR 8944 --- [mercado-thiago-core] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.mercadoThiago.core.server.MercadoThiagoApplication]: Error processing condition on org.springframework.boot.autoconfigure.security.reactive.ReactiveUserDetailsServiceAutoConfiguration
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:626) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:849) ~[spring-context-6.2.5.jar:6.2.5]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:846) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:816) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:197) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:418) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:791) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:609) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.4.jar:3.4.4]
+	at com.mercadoThiago.core.server.MercadoThiagoApplication.main(MercadoThiagoApplication.java:11) ~[classes/:na]
+Caused by: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.security.reactive.ReactiveUserDetailsServiceAutoConfiguration
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-3.4.4.jar:3.4.4]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:99) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:246) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:616) ~[spring-context-6.2.5.jar:6.2.5]
+	... 18 common frames omitted
+Caused by: org.springframework.util.PlaceholderResolutionException: Could not resolve placeholder 'SECURITY_PASSWORD' in value "${SECURITY_PASSWORD}"
+	at org.springframework.util.PlaceholderResolutionException.withValue(PlaceholderResolutionException.java:81) ~[spring-core-6.2.5.jar:6.2.5]
+	at org.springframework.util.PlaceholderParser$ParsedValue.resolve(PlaceholderParser.java:423) ~[spring-core-6.2.5.jar:6.2.5]
+	at org.springframework.util.PlaceholderParser.replacePlaceholders(PlaceholderParser.java:128) ~[spring-core-6.2.5.jar:6.2.5]
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:118) ~[spring-core-6.2.5.jar:6.2.5]
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:114) ~[spring-core-6.2.5.jar:6.2.5]
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:255) ~[spring-core-6.2.5.jar:6.2.5]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:226) ~[spring-core-6.2.5.jar:6.2.5]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveNestedPlaceholders(AbstractPropertyResolver.java:246) ~[spring-core-6.2.5.jar:6.2.5]
+	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:81) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:62) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.core.env.AbstractEnvironment.getProperty(AbstractEnvironment.java:557) ~[spring-core-6.2.5.jar:6.2.5]
+	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition$Spec.collectProperties(OnPropertyCondition.java:121) ~[spring-boot-autoconfigure-3.4.4.jar:3.4.4]
+	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition.determineOutcome(OnPropertyCondition.java:71) ~[spring-boot-autoconfigure-3.4.4.jar:3.4.4]
+	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition.getMatchOutcome(OnPropertyCondition.java:58) ~[spring-boot-autoconfigure-3.4.4.jar:3.4.4]
+	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberOutcomes.getConditionOutcome(AbstractNestedCondition.java:195) ~[spring-boot-autoconfigure-3.4.4.jar:3.4.4]
+	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberOutcomes.<init>(AbstractNestedCondition.java:189) ~[spring-boot-autoconfigure-3.4.4.jar:3.4.4]
+	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberConditions.lambda$getMatchOutcomes$0(AbstractNestedCondition.java:169) ~[spring-boot-autoconfigure-3.4.4.jar:3.4.4]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:986) ~[na:na]
+	at org.springframework.util.MultiValueMapAdapter.forEach(MultiValueMapAdapter.java:179) ~[spring-core-6.2.5.jar:6.2.5]
+	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1707) ~[na:na]
+	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberConditions.getMatchOutcomes(AbstractNestedCondition.java:169) ~[spring-boot-autoconfigure-3.4.4.jar:3.4.4]
+	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberMatchOutcomes.<init>(AbstractNestedCondition.java:78) ~[spring-boot-autoconfigure-3.4.4.jar:3.4.4]
+	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition.getMatchOutcome(AbstractNestedCondition.java:63) ~[spring-boot-autoconfigure-3.4.4.jar:3.4.4]
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-3.4.4.jar:3.4.4]
+	... 21 common frames omitted
+
+2025-04-17T21:15:24.523-03:00  INFO 29268 --- [mercado-thiago-core] [main] c.m.c.server.MercadoThiagoApplication    : Starting MercadoThiagoApplication using Java 21.0.5 with PID 29268 (C:\Users\Thiago Gonzalez\Desktop\MercadoThiago\backend\target\classes started by Thiago Gonzalez in C:\Users\Thiago Gonzalez\Desktop\MercadoThiago\backend)
+2025-04-17T21:15:24.524-03:00  INFO 29268 --- [mercado-thiago-core] [main] c.m.c.server.MercadoThiagoApplication    : The following 1 profile is active: "dev"
+2025-04-17T21:15:25.302-03:00  INFO 29268 --- [mercado-thiago-core] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-04-17T21:15:25.315-03:00  INFO 29268 --- [mercado-thiago-core] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-17T21:15:25.315-03:00  INFO 29268 --- [mercado-thiago-core] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-17T21:15:25.367-03:00  INFO 29268 --- [mercado-thiago-core] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-17T21:15:25.368-03:00  INFO 29268 --- [mercado-thiago-core] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 804 ms
+2025-04-17T21:15:25.677-03:00  WARN 29268 --- [mercado-thiago-core] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 4b9617aa-7db6-486a-8efc-f18420cbefa5
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-04-17T21:15:25.709-03:00  INFO 29268 --- [mercado-thiago-core] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-04-17T21:15:25.831-03:00  INFO 29268 --- [mercado-thiago-core] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-04-17T21:15:25.836-03:00  INFO 29268 --- [mercado-thiago-core] [main] c.m.c.server.MercadoThiagoApplication    : Started MercadoThiagoApplication in 1.722 seconds (process running for 2.058)
+2025-04-17T21:15:32.966-03:00  INFO 29268 --- [mercado-thiago-core] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-17T21:15:32.966-03:00  INFO 29268 --- [mercado-thiago-core] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-17T21:15:32.967-03:00  INFO 29268 --- [mercado-thiago-core] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-04-17T21:18:37.038-03:00  INFO 29268 --- [mercado-thiago-core] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-17T21:18:37.042-03:00  INFO 29268 --- [mercado-thiago-core] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-17T21:18:42.369-03:00  INFO 24496 --- [mercado-thiago-core] [main] c.m.c.server.MercadoThiagoApplication    : Starting MercadoThiagoApplication using Java 21.0.5 with PID 24496 (C:\Users\Thiago Gonzalez\Desktop\MercadoThiago\backend\target\classes started by Thiago Gonzalez in C:\Users\Thiago Gonzalez\Desktop\MercadoThiago\backend)
+2025-04-17T21:18:42.371-03:00  INFO 24496 --- [mercado-thiago-core] [main] c.m.c.server.MercadoThiagoApplication    : The following 1 profile is active: "dev"
+2025-04-17T21:18:43.122-03:00  INFO 24496 --- [mercado-thiago-core] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-04-17T21:18:43.134-03:00  INFO 24496 --- [mercado-thiago-core] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-17T21:18:43.135-03:00  INFO 24496 --- [mercado-thiago-core] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-17T21:18:43.191-03:00  INFO 24496 --- [mercado-thiago-core] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-17T21:18:43.192-03:00  INFO 24496 --- [mercado-thiago-core] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 783 ms
+2025-04-17T21:18:43.505-03:00  WARN 24496 --- [mercado-thiago-core] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: ed71b013-be81-401a-aeed-1771e410e144
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-04-17T21:18:43.520-03:00  INFO 24496 --- [mercado-thiago-core] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-04-17T21:18:43.637-03:00  INFO 24496 --- [mercado-thiago-core] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-04-17T21:18:43.643-03:00  INFO 24496 --- [mercado-thiago-core] [main] c.m.c.server.MercadoThiagoApplication    : Started MercadoThiagoApplication in 1.702 seconds (process running for 1.988)
+2025-04-17T21:18:43.945-03:00  INFO 24496 --- [mercado-thiago-core] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-17T21:18:43.946-03:00  INFO 24496 --- [mercado-thiago-core] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-17T21:18:43.946-03:00  INFO 24496 --- [mercado-thiago-core] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-04-17T21:21:00.112-03:00  INFO 24496 --- [mercado-thiago-core] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-17T21:21:00.118-03:00  INFO 24496 --- [mercado-thiago-core] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-17T21:21:05.369-03:00  INFO 29236 --- [mercado-thiago-core] [main] c.m.c.server.MercadoThiagoApplication    : Starting MercadoThiagoApplication using Java 21.0.5 with PID 29236 (C:\Users\Thiago Gonzalez\Desktop\MercadoThiago\backend\target\classes started by Thiago Gonzalez in C:\Users\Thiago Gonzalez\Desktop\MercadoThiago\backend)
+2025-04-17T21:21:05.371-03:00  INFO 29236 --- [mercado-thiago-core] [main] c.m.c.server.MercadoThiagoApplication    : The following 1 profile is active: "dev"
+2025-04-17T21:21:06.032-03:00  INFO 29236 --- [mercado-thiago-core] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-04-17T21:21:06.043-03:00  INFO 29236 --- [mercado-thiago-core] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-17T21:21:06.043-03:00  INFO 29236 --- [mercado-thiago-core] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-17T21:21:06.093-03:00  INFO 29236 --- [mercado-thiago-core] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-17T21:21:06.093-03:00  INFO 29236 --- [mercado-thiago-core] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 691 ms
+2025-04-17T21:21:06.366-03:00  WARN 29236 --- [mercado-thiago-core] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 28e12ddf-0908-44cd-bff1-6c0a03893561
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-04-17T21:21:06.379-03:00  INFO 29236 --- [mercado-thiago-core] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-04-17T21:21:06.482-03:00  INFO 29236 --- [mercado-thiago-core] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-04-17T21:21:06.489-03:00  INFO 29236 --- [mercado-thiago-core] [main] c.m.c.server.MercadoThiagoApplication    : Started MercadoThiagoApplication in 1.49 seconds (process running for 1.759)
+2025-04-17T21:21:20.380-03:00  INFO 29236 --- [mercado-thiago-core] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-17T21:21:20.387-03:00  INFO 29236 --- [mercado-thiago-core] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-17T21:21:25.664-03:00  INFO 2304 --- [mercado-thiago-core] [main] c.m.c.server.MercadoThiagoApplication    : Starting MercadoThiagoApplication using Java 21.0.5 with PID 2304 (C:\Users\Thiago Gonzalez\Desktop\MercadoThiago\backend\target\classes started by Thiago Gonzalez in C:\Users\Thiago Gonzalez\Desktop\MercadoThiago\backend)
+2025-04-17T21:21:25.666-03:00  INFO 2304 --- [mercado-thiago-core] [main] c.m.c.server.MercadoThiagoApplication    : The following 1 profile is active: "dev"
+2025-04-17T21:21:26.356-03:00  INFO 2304 --- [mercado-thiago-core] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-04-17T21:21:26.368-03:00  INFO 2304 --- [mercado-thiago-core] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-17T21:21:26.369-03:00  INFO 2304 --- [mercado-thiago-core] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-17T21:21:26.423-03:00  INFO 2304 --- [mercado-thiago-core] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-17T21:21:26.424-03:00  INFO 2304 --- [mercado-thiago-core] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 720 ms
+2025-04-17T21:21:26.713-03:00  WARN 2304 --- [mercado-thiago-core] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 664ba794-842f-40c0-bb5a-abc66a1f77bc
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-04-17T21:21:26.729-03:00  INFO 2304 --- [mercado-thiago-core] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-04-17T21:21:26.834-03:00  INFO 2304 --- [mercado-thiago-core] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-04-17T21:21:26.839-03:00  INFO 2304 --- [mercado-thiago-core] [main] c.m.c.server.MercadoThiagoApplication    : Started MercadoThiagoApplication in 1.541 seconds (process running for 1.842)
+2025-04-17T21:25:11.056-03:00  INFO 2304 --- [mercado-thiago-core] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-17T21:25:11.064-03:00  INFO 2304 --- [mercado-thiago-core] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-17T21:25:18.352-03:00  INFO 22652 --- [mercado-thiago-core] [main] c.m.core.MercadoThiagoApplication        : Starting MercadoThiagoApplication using Java 21.0.5 with PID 22652 (C:\Users\Thiago Gonzalez\Desktop\MercadoThiago\backend\target\classes started by Thiago Gonzalez in C:\Users\Thiago Gonzalez\Desktop\MercadoThiago\backend)
+2025-04-17T21:25:18.354-03:00  INFO 22652 --- [mercado-thiago-core] [main] c.m.core.MercadoThiagoApplication        : The following 1 profile is active: "dev"
+2025-04-17T21:25:19.144-03:00  INFO 22652 --- [mercado-thiago-core] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-04-17T21:25:19.154-03:00  INFO 22652 --- [mercado-thiago-core] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-17T21:25:19.154-03:00  INFO 22652 --- [mercado-thiago-core] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-17T21:25:19.196-03:00  INFO 22652 --- [mercado-thiago-core] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-17T21:25:19.196-03:00  INFO 22652 --- [mercado-thiago-core] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 805 ms
+2025-04-17T21:25:19.277-03:00  WARN 22652 --- [mercado-thiago-core] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 39178e46-726d-4471-8522-f208497507a8
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-04-17T21:25:19.290-03:00  INFO 22652 --- [mercado-thiago-core] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-04-17T21:25:19.592-03:00  INFO 22652 --- [mercado-thiago-core] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-04-17T21:25:19.598-03:00  INFO 22652 --- [mercado-thiago-core] [main] c.m.core.MercadoThiagoApplication        : Started MercadoThiagoApplication in 1.597 seconds (process running for 1.872)
+2025-04-17T21:25:35.333-03:00  INFO 22652 --- [mercado-thiago-core] [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-17T21:25:35.333-03:00  INFO 22652 --- [mercado-thiago-core] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-17T21:25:35.334-03:00  INFO 22652 --- [mercado-thiago-core] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-04-17T21:26:56.033-03:00  INFO 22652 --- [mercado-thiago-core] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-17T21:26:56.040-03:00  INFO 22652 --- [mercado-thiago-core] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-17T21:27:01.239-03:00  INFO 23344 --- [mercado-thiago-core] [main] c.m.core.MercadoThiagoApplication        : Starting MercadoThiagoApplication using Java 21.0.5 with PID 23344 (C:\Users\Thiago Gonzalez\Desktop\MercadoThiago\backend\target\classes started by Thiago Gonzalez in C:\Users\Thiago Gonzalez\Desktop\MercadoThiago\backend)
+2025-04-17T21:27:01.241-03:00  INFO 23344 --- [mercado-thiago-core] [main] c.m.core.MercadoThiagoApplication        : The following 1 profile is active: "dev"
+2025-04-17T21:27:02.012-03:00  INFO 23344 --- [mercado-thiago-core] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-04-17T21:27:02.025-03:00  INFO 23344 --- [mercado-thiago-core] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-17T21:27:02.025-03:00  INFO 23344 --- [mercado-thiago-core] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-17T21:27:02.079-03:00  INFO 23344 --- [mercado-thiago-core] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-17T21:27:02.080-03:00  INFO 23344 --- [mercado-thiago-core] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 799 ms
+2025-04-17T21:27:02.164-03:00  WARN 23344 --- [mercado-thiago-core] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 643e0767-b418-439c-8065-d4619331774d
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-04-17T21:27:02.188-03:00  INFO 23344 --- [mercado-thiago-core] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-04-17T21:27:02.332-03:00  WARN 23344 --- [mercado-thiago-core] [main] o.s.security.core.userdetails.User       : User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+2025-04-17T21:27:02.546-03:00  INFO 23344 --- [mercado-thiago-core] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-04-17T21:27:02.552-03:00  INFO 23344 --- [mercado-thiago-core] [main] c.m.core.MercadoThiagoApplication        : Started MercadoThiagoApplication in 1.659 seconds (process running for 1.932)
+2025-04-17T21:27:03.406-03:00  INFO 23344 --- [mercado-thiago-core] [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-17T21:27:03.406-03:00  INFO 23344 --- [mercado-thiago-core] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-17T21:27:03.407-03:00  INFO 23344 --- [mercado-thiago-core] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-04-17T21:29:41.477-03:00  INFO 23344 --- [mercado-thiago-core] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-17T21:29:41.480-03:00  INFO 23344 --- [mercado-thiago-core] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-17T21:29:46.585-03:00  INFO 14904 --- [mercado-thiago-core] [main] c.m.core.MercadoThiagoApplication        : Starting MercadoThiagoApplication using Java 21.0.5 with PID 14904 (C:\Users\Thiago Gonzalez\Desktop\MercadoThiago\backend\target\classes started by Thiago Gonzalez in C:\Users\Thiago Gonzalez\Desktop\MercadoThiago\backend)
+2025-04-17T21:29:46.587-03:00  INFO 14904 --- [mercado-thiago-core] [main] c.m.core.MercadoThiagoApplication        : The following 1 profile is active: "dev"
+2025-04-17T21:29:47.280-03:00  INFO 14904 --- [mercado-thiago-core] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-04-17T21:29:47.290-03:00  INFO 14904 --- [mercado-thiago-core] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-17T21:29:47.290-03:00  INFO 14904 --- [mercado-thiago-core] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-17T21:29:47.339-03:00  INFO 14904 --- [mercado-thiago-core] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-17T21:29:47.340-03:00  INFO 14904 --- [mercado-thiago-core] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 722 ms
+2025-04-17T21:29:47.427-03:00  WARN 14904 --- [mercado-thiago-core] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 1b3b85ce-3802-4661-9fb3-14429ec04fb1
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-04-17T21:29:47.442-03:00  INFO 14904 --- [mercado-thiago-core] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-04-17T21:29:47.756-03:00  INFO 14904 --- [mercado-thiago-core] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-04-17T21:29:47.761-03:00  INFO 14904 --- [mercado-thiago-core] [main] c.m.core.MercadoThiagoApplication        : Started MercadoThiagoApplication in 1.529 seconds (process running for 1.789)
+2025-04-17T21:30:03.082-03:00  INFO 14904 --- [mercado-thiago-core] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-17T21:30:03.083-03:00  INFO 14904 --- [mercado-thiago-core] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-17T21:30:03.084-03:00  INFO 14904 --- [mercado-thiago-core] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-04-17T21:32:58.680-03:00  INFO 14904 --- [mercado-thiago-core] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-17T21:32:58.684-03:00  INFO 14904 --- [mercado-thiago-core] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-17T21:33:03.888-03:00  INFO 22360 --- [mercado-thiago-core] [main] c.m.core.MercadoThiagoApplication        : Starting MercadoThiagoApplication using Java 21.0.5 with PID 22360 (C:\Users\Thiago Gonzalez\Desktop\MercadoThiago\backend\target\classes started by Thiago Gonzalez in C:\Users\Thiago Gonzalez\Desktop\MercadoThiago\backend)
+2025-04-17T21:33:03.890-03:00  INFO 22360 --- [mercado-thiago-core] [main] c.m.core.MercadoThiagoApplication        : The following 1 profile is active: "dev"
+2025-04-17T21:33:04.603-03:00  INFO 22360 --- [mercado-thiago-core] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-04-17T21:33:04.614-03:00  INFO 22360 --- [mercado-thiago-core] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-17T21:33:04.614-03:00  INFO 22360 --- [mercado-thiago-core] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-17T21:33:04.658-03:00  INFO 22360 --- [mercado-thiago-core] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-17T21:33:04.659-03:00  INFO 22360 --- [mercado-thiago-core] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 737 ms
+2025-04-17T21:33:04.750-03:00  WARN 22360 --- [mercado-thiago-core] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 3bfa02ce-b4ed-4f4e-9499-c4a298c7aa87
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-04-17T21:33:04.765-03:00  INFO 22360 --- [mercado-thiago-core] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-04-17T21:33:05.049-03:00  INFO 22360 --- [mercado-thiago-core] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-04-17T21:33:05.054-03:00  INFO 22360 --- [mercado-thiago-core] [main] c.m.core.MercadoThiagoApplication        : Started MercadoThiagoApplication in 1.514 seconds (process running for 1.771)
+2025-04-17T21:33:14.122-03:00  INFO 22360 --- [mercado-thiago-core] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-17T21:33:14.123-03:00  INFO 22360 --- [mercado-thiago-core] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-17T21:33:14.124-03:00  INFO 22360 --- [mercado-thiago-core] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-04-17T21:38:23.627-03:00  INFO 22360 --- [mercado-thiago-core] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-17T21:38:23.632-03:00  INFO 22360 --- [mercado-thiago-core] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-17T21:38:28.934-03:00  INFO 26680 --- [mercado-thiago-core] [main] c.m.core.MercadoThiagoApplication        : Starting MercadoThiagoApplication using Java 21.0.5 with PID 26680 (C:\Users\Thiago Gonzalez\Desktop\MercadoThiago\backend\target\classes started by Thiago Gonzalez in C:\Users\Thiago Gonzalez\Desktop\MercadoThiago\backend)
+2025-04-17T21:38:28.936-03:00  INFO 26680 --- [mercado-thiago-core] [main] c.m.core.MercadoThiagoApplication        : The following 1 profile is active: "dev"
+2025-04-17T21:38:29.718-03:00  INFO 26680 --- [mercado-thiago-core] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-04-17T21:38:29.730-03:00  INFO 26680 --- [mercado-thiago-core] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-17T21:38:29.730-03:00  INFO 26680 --- [mercado-thiago-core] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-17T21:38:29.774-03:00  INFO 26680 --- [mercado-thiago-core] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-17T21:38:29.775-03:00  INFO 26680 --- [mercado-thiago-core] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 802 ms
+2025-04-17T21:38:29.857-03:00  WARN 26680 --- [mercado-thiago-core] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: ec7fb6fa-fc04-44f7-96ff-f52c6ff66183
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-04-17T21:38:29.874-03:00  INFO 26680 --- [mercado-thiago-core] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-04-17T21:38:30.177-03:00  INFO 26680 --- [mercado-thiago-core] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-04-17T21:38:30.183-03:00  INFO 26680 --- [mercado-thiago-core] [main] c.m.core.MercadoThiagoApplication        : Started MercadoThiagoApplication in 1.631 seconds (process running for 1.918)
+2025-04-17T21:38:35.035-03:00  INFO 26680 --- [mercado-thiago-core] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-17T21:38:35.035-03:00  INFO 26680 --- [mercado-thiago-core] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-17T21:38:35.036-03:00  INFO 26680 --- [mercado-thiago-core] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-04-17T21:41:49.089-03:00  INFO 26680 --- [mercado-thiago-core] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-17T21:41:49.093-03:00  INFO 26680 --- [mercado-thiago-core] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-17T21:41:54.329-03:00  INFO 18680 --- [mercado-thiago-core] [main] c.m.core.MercadoThiagoApplication        : Starting MercadoThiagoApplication using Java 21.0.5 with PID 18680 (C:\Users\Thiago Gonzalez\Desktop\MercadoThiago\backend\target\classes started by Thiago Gonzalez in C:\Users\Thiago Gonzalez\Desktop\MercadoThiago\backend)
+2025-04-17T21:41:54.331-03:00  INFO 18680 --- [mercado-thiago-core] [main] c.m.core.MercadoThiagoApplication        : The following 1 profile is active: "dev"
+2025-04-17T21:41:55.054-03:00  INFO 18680 --- [mercado-thiago-core] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-04-17T21:41:55.066-03:00  INFO 18680 --- [mercado-thiago-core] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-17T21:41:55.066-03:00  INFO 18680 --- [mercado-thiago-core] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-17T21:41:55.110-03:00  INFO 18680 --- [mercado-thiago-core] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-17T21:41:55.111-03:00  INFO 18680 --- [mercado-thiago-core] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 747 ms
+2025-04-17T21:41:55.196-03:00  WARN 18680 --- [mercado-thiago-core] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 089a1b07-07d4-4b3c-a425-e0a5a338f430
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-04-17T21:41:55.210-03:00  INFO 18680 --- [mercado-thiago-core] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-04-17T21:41:55.551-03:00  INFO 18680 --- [mercado-thiago-core] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-04-17T21:41:55.555-03:00  INFO 18680 --- [mercado-thiago-core] [main] c.m.core.MercadoThiagoApplication        : Started MercadoThiagoApplication in 1.583 seconds (process running for 1.848)
+2025-04-17T21:41:57.365-03:00  INFO 18680 --- [mercado-thiago-core] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-17T21:41:57.365-03:00  INFO 18680 --- [mercado-thiago-core] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-17T21:41:57.366-03:00  INFO 18680 --- [mercado-thiago-core] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-04-17T21:44:23.231-03:00  INFO 18680 --- [mercado-thiago-core] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-17T21:44:23.235-03:00  INFO 18680 --- [mercado-thiago-core] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-17T21:44:28.454-03:00  INFO 17684 --- [mercado-thiago-core] [main] c.m.core.MercadoThiagoApplication        : Starting MercadoThiagoApplication using Java 21.0.5 with PID 17684 (C:\Users\Thiago Gonzalez\Desktop\MercadoThiago\backend\target\classes started by Thiago Gonzalez in C:\Users\Thiago Gonzalez\Desktop\MercadoThiago\backend)
+2025-04-17T21:44:28.455-03:00  INFO 17684 --- [mercado-thiago-core] [main] c.m.core.MercadoThiagoApplication        : The following 1 profile is active: "dev"
+2025-04-17T21:44:29.168-03:00  INFO 17684 --- [mercado-thiago-core] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-04-17T21:44:29.181-03:00  INFO 17684 --- [mercado-thiago-core] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-17T21:44:29.181-03:00  INFO 17684 --- [mercado-thiago-core] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-17T21:44:29.237-03:00  INFO 17684 --- [mercado-thiago-core] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-17T21:44:29.238-03:00  INFO 17684 --- [mercado-thiago-core] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 752 ms
+2025-04-17T21:44:29.323-03:00  WARN 17684 --- [mercado-thiago-core] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 2b00786f-0411-4999-9b78-38808a0161e4
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-04-17T21:44:29.336-03:00  INFO 17684 --- [mercado-thiago-core] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-04-17T21:44:29.634-03:00  INFO 17684 --- [mercado-thiago-core] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-04-17T21:44:29.639-03:00  INFO 17684 --- [mercado-thiago-core] [main] c.m.core.MercadoThiagoApplication        : Started MercadoThiagoApplication in 1.54 seconds (process running for 1.8)
+2025-04-17T21:44:40.439-03:00  INFO 17684 --- [mercado-thiago-core] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-17T21:44:40.439-03:00  INFO 17684 --- [mercado-thiago-core] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-17T21:44:40.440-03:00  INFO 17684 --- [mercado-thiago-core] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms

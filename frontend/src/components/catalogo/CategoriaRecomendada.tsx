@@ -1,5 +1,4 @@
 import React from "react";
-import CategoriaRecomendada from "./CategoriaRecomendada";
 
 type DestacadaProps = {
   titulo: string;

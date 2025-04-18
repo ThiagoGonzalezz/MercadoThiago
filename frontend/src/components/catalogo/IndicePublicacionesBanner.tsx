@@ -2,13 +2,11 @@ import React from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import TarjetaProducto from "./TarjetaPublicacionIndice";
 
-import Imagen from "./../../assets/publicaciones/celular1.png";
-
 const productos = [
   {
     id: 1,
     nombre: "Auriculares Inalámbricos Lenovo Livepod Lp75...",
-    imagen: "./../../assets/publicaciones/celular1.png",
+    imagen: `${process.env.REACT_APP_BACKEND_URL}/uploads/publicaciones/auriculares.png`,
     precioAnterior: 28999,
     precioActual: 25499,
     descuento: "12% OFF",
@@ -18,24 +16,21 @@ const productos = [
   {
     id: 2,
     nombre: "Auriculares In-ear Inalámbricos A6s Negro",
-    imagen: "./../../assets/publicaciones/celular1.png",
-    precioActual: 5693,
+    imagen: `${process.env.REACT_APP_BACKEND_URL}/uploads/publicaciones/auriculares.png`,    precioActual: 5693,
     cuotas: "En 6 cuotas de $ 183.692",
     envio: "Llega gratis mañana",
   },
   {
     id: 3,
     nombre: "Auriculares In-ear Gamer Inalámbricos T Auriculares In-ear Gamer Inalámbricos T Auriculares In-ear Gamer Inalámbricos T Auriculares In-ear Gamer Inalámbricos T...",
-    imagen: "./../../assets/publicaciones/celular1.png",
-    precioActual: 5400,
+    imagen: `${process.env.REACT_APP_BACKEND_URL}/uploads/publicaciones/auriculares.png`,    precioActual: 5400,
     cuotas: "En 6 cuotas de $ 88.611",
     envio: "Envío gratis",
   },
   {
     id: 4,
     nombre: "Auriculares Inalámbricos Xiaomi Redmi Buds 3...",
-    imagen: "./../../assets/publicaciones/celular1.png",
-    precioAnterior: 36990,
+    imagen: `${process.env.REACT_APP_BACKEND_URL}/uploads/publicaciones/auriculares.png`,    precioAnterior: 36990,
     precioActual: 22933,
     descuento: "38% OFF",
     cuotas: "En 6 cuotas de $ 213.163",
@@ -44,8 +39,7 @@ const productos = [
   {
     id: 5,
     nombre: "Auriculares Inalámbricos Xiaomi Redmi Buds 4...",
-    imagen: "./../../assets/publicaciones/celular1.png",
-    precioAnterior: 26990,
+    imagen: `${process.env.REACT_APP_BACKEND_URL}/uploads/publicaciones/auriculares.png`,    precioAnterior: 26990,
     precioActual: 22401,
     descuento: "17% OFF",
     cuotas: "En 6 cuotas de $ 213.163",
@@ -54,8 +48,7 @@ const productos = [
   {
     id: 6,
     nombre: "Auriculares In-ear Gamer Inalámbricos...",
-    imagen: "./../../assets/publicaciones/celular1.png",
-    precioActual: 18589,
+    imagen: `${process.env.REACT_APP_BACKEND_URL}/uploads/publicaciones/auriculares.png`,    precioActual: 18589,
     cuotas: "En 6 cuotas de $ 26.811",
     envio: "Llega gratis mañana",
   },

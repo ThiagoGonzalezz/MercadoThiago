@@ -1,4 +1,4 @@
-package com.mercadoThiago.core.server;
+package com.mercadoThiago.core;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

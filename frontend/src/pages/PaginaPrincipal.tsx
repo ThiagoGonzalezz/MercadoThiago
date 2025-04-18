@@ -10,15 +10,10 @@ import IndicePublicacionesBanner from "./../components/catalogo/IndicePublicacio
 import AccesosRapidosBanner from "./../components/catalogo/AccesosRapidosBanner";
 
 
-import Publicidad from "./../assets/publicidades/nivel2/publicidad2.png";
-import Publicidad2 from "./../assets/publicidades/nivel2/publicidad3.png";
-
-import Publicidad1 from "./../assets/publicidades/nivel1/2nivel1.webp";
-
 const PaginaPrincipal: React.FC = () => {
     return (
         <div>
-            <PublicidadNivel1 imagen={Publicidad1} link="/ofertas" alt="PublicidadNivel1" />
+            <PublicidadNivel1 imagen={`${process.env.REACT_APP_BACKEND_URL}/uploads/publicidades/nivel1/2nivel1.webp`} link="/ofertas" alt="PublicidadNivel1" />
 
             <main className="flex-grow bg-[#FFCE83]">
 
@@ -31,7 +26,7 @@ const PaginaPrincipal: React.FC = () => {
 
                     <OfertasBanner />
                     <PublicidadBanner 
-                        imagen={Publicidad}
+                        imagen={`${process.env.REACT_APP_BACKEND_URL}/uploads/publicidades/nivel2/publicidad2.png`}
                         link="https://tusitio.com/productos"
                         alt="Conoce todos los productos"
                     />
@@ -41,7 +36,7 @@ const PaginaPrincipal: React.FC = () => {
 
                     <BeneficiosBanner/>
                     <PublicidadBanner 
-                        imagen={Publicidad2}
+                        imagen={`${process.env.REACT_APP_BACKEND_URL}/uploads/publicidades/nivel2/publicidad3.png`}
                         link="https://tusitio.com/productos"
                         alt="Conoce todos los productos"
                     />
