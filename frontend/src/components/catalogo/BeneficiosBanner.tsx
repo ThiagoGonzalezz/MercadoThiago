@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const backendUrl = process.env.REACT_APP_BACKEND_URL;
-
 type BenefitItem = {
   src: string;
   alt: string;
@@ -10,10 +8,10 @@ type BenefitItem = {
 };
 
 const benefits: BenefitItem[] = [
-  { src: `${backendUrl}/uploads/beneficios/hbo.png`, alt: "Beneficio 1", href: "https://beneficio1.com" },
-  { src: `${backendUrl}/uploads/beneficios/disney.png`, alt: "Beneficio 2", href: "https://beneficio2.com" },
-  { src: `${backendUrl}/uploads/beneficios/paramount.png`, alt: "Beneficio 3", href: "https://beneficio3.com" },
-  { src: `${backendUrl}/uploads/beneficios/vix.png`, alt: "Beneficio 4", href: "https://beneficio4.com" },
+  { src: `${process.env.REACT_APP_BACKEND_URL}/uploads/beneficios/hbo.png`, alt: "Beneficio 1", href: "https://beneficio1.com" },
+  { src: `${process.env.REACT_APP_BACKEND_URL}/uploads/beneficios/disney.png`, alt: "Beneficio 2", href: "https://beneficio2.com" },
+  { src: `${process.env.REACT_APP_BACKEND_URL}/uploads/beneficios/paramount.png`, alt: "Beneficio 3", href: "https://beneficio3.com" },
+  { src: `${process.env.REACT_APP_BACKEND_URL}/uploads/beneficios/vix.png`, alt: "Beneficio 4", href: "https://beneficio4.com" },
 ];
 
 const BeneficiosBanner: React.FC = () => {

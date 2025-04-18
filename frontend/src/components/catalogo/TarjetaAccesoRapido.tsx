@@ -1,7 +1,5 @@
 import React from "react";
 
-import Imagen from "./../../assets/accesos_rapidos/mas-vendidos.png";
-
 type TarjetaAccesoRapidoProps = {
   titulo: string;
   descripcion: string;
@@ -25,8 +23,7 @@ const TarjetaAccesoRapido: React.FC<TarjetaAccesoRapidoProps> = ({
       <h3 className="font-montserrat font-semibold text-xl text-left mb-4">{titulo}</h3>
 
       <div className="flex justify-center mb-4">
-        {/*CAMBIAR IMAGEN POR imagenSrc*/}
-        <img src={Imagen} alt={titulo} className="h-30" />
+        <img src={imagenSrc} alt={titulo} className="h-30" />
       </div>
 
       <p className="font-roboto font-regular text-lg leading-tight text-[#171717] text-center group-hover:text-[#7B30E2] transition-colors duration-200">

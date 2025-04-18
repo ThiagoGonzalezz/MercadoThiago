@@ -8,8 +8,6 @@ import {
   MessageCircleIcon,
 } from 'lucide-react';
 
-import logo from "../../assets/logo512-borde-blanco.png";
-
 const Header: React.FC = () => {
   return (
     <header className="bg-[#A248C3] text-white text-sm font-montserrat shadow-lg">
@@ -17,7 +15,7 @@ const Header: React.FC = () => {
       <div className="flex items-center justify-between px-6 py-3">
         {/* Logo + nombre */}
         <div className="flex items-center space-x-3">
-          <img src={logo} alt="Logo" className="w-16 h-16 rounded-full" />
+          <img src="./../../assets/logo512-borde-blanco.png" alt="Logo" className="w-16 h-16 rounded-full" />
           <h1 className="mercado-logo-text">MercadoThiago</h1>
         </div>
 

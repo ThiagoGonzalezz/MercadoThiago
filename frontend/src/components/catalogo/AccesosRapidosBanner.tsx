@@ -7,25 +7,25 @@ const tarjetas = [
     titulo: "Tiendas oficiales",
     descripcion: "Encontrá tus marcas preferidas.",
     textoBoton: "Mostrar tiendas",
-    imagenSrc: "/images/tienda.png",
+    imagenSrc: "./../../../assets/accesos_rapidos/tiendas-oficiales.png",
   },
   {
     titulo: "Medios de pago",
     descripcion: "Pagá tus compras de forma rápida y segura.",
     textoBoton: "Conocer medios de pago",
-    imagenSrc: "/images/wallet.png",
+    imagenSrc: "./../../../assets/accesos_rapidos/medios-de-pago.png",
   },
   {
     titulo: "Menos de $20.000",
     descripcion: "Descubrí productos con precios bajos.",
     textoBoton: "Mostrar productos",
-    imagenSrc: "/images/money.png",
+    imagenSrc: "./../../../assets/accesos_rapidos/productos-baratos.png",
   },
   {
     titulo: "Más vendidos",
     descripcion: "Explorá los productos que son tendencia.",
     textoBoton: "Ir a Más vendidos",
-    imagenSrc: "/images/shoes.png",
+    imagenSrc: "./../../../assets/accesos_rapidos/mas-vendidos.png",
   },
 ];
 
