@@ -11,6 +11,8 @@ import AccesosRapidosBanner from "./../components/catalogo/AccesosRapidosBanner"
 
 
 import Publicidad from "./../assets/publicidades/nivel2/publicidad2.png";
+import Publicidad2 from "./../assets/publicidades/nivel2/publicidad3.png";
+
 import Publicidad1 from "./../assets/publicidades/nivel1/2nivel1.webp";
 
 const PaginaPrincipal: React.FC = () => {
@@ -23,17 +25,32 @@ const PaginaPrincipal: React.FC = () => {
                 <div className="container mx-auto py-8 space-y-10">
                     
                     <AccesosRapidosBanner/>
-                    
-                    <CategoriasRecomendadasBanner />
-                    < BeneficiosBanner/>
+
+                    <IndicePublicacionesBanner/>
+                    <IndicePublicacionesBanner/>
+
+                    <OfertasBanner />
                     <PublicidadBanner 
                         imagen={Publicidad}
                         link="https://tusitio.com/productos"
                         alt="Conoce todos los productos"
                     />
-                    <IndiceCategoriasBanner />
-                    <OfertasBanner />
+
                     <IndicePublicacionesBanner/>
+                    <IndicePublicacionesBanner/>
+
+                    <BeneficiosBanner/>
+                    <PublicidadBanner 
+                        imagen={Publicidad2}
+                        link="https://tusitio.com/productos"
+                        alt="Conoce todos los productos"
+                    />
+
+                    <IndicePublicacionesBanner/>
+                    <IndicePublicacionesBanner/>
+
+                    <CategoriasRecomendadasBanner />
+                    <IndiceCategoriasBanner />
 
                 </div>
             </main>
