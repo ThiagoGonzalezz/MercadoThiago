@@ -3,7 +3,7 @@ import TarjetaOferta from "./Oferta";
 
 const OfertasBanner: React.FC = () => {
     return (
-      <div className="flex flex-col md:flex-row gap-4 w-full max-w-6xl mx-auto shadow-lg">
+      <div className="flex flex-col md:flex-row gap-4 w-full max-w-6xl mx-auto ">
         <TarjetaOferta
           title="HASTA 20% OFF EN BATERÍAS DE AUTO"
           subtitle="Hacé el cambio"

@@ -117,8 +117,8 @@ const IndiceCategorias: React.FC = () => {
                 className="w-12 h-12 object-cover rounded-md"
               />
             </div>
-            <div className="p-3">
-              <span className="text-sm font-medium font-montserrat leading-tight transition-colors duration-300 group-hover:text-purple-600">
+            <div className="p-3 w-[65%] flex-1 flex items-center overflow-hidden">
+              <span className="text-sm font-medium font-montserrat leading-tight transition-colors duration-300 group-hover:text-purple-600 truncate">
                 {cat.name}
               </span>
             </div>

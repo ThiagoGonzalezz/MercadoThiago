@@ -13,7 +13,7 @@ const TarjetaOferta: React.FC<TarjetaOfertaProps> = ({ title, subtitle, image, h
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex w-full max-w-3xl max-h-[200px]  rounded-xl overflow-hidden shadow-lg bg-white transition hover:shadow-xl"
+      className="flex w-full max-w-3xl max-h-[200px]  rounded-xl overflow-hidden shadow-lg bg-white transition hover:shadow-lg"
     >
       {/* Lado Izquierdo: Texto */}
       <div className="flex flex-col justify-center px-6 py-4 w-1/2">
